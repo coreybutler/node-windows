@@ -3,7 +3,7 @@
   This is a standalone module designed for [NGN](http://github.com/coreybutler/NGN), which
   provides pluggable support for using NGN/Node.JS scripts with Windows.
 
-## Features
+## Overview
 
 The following features are available in ngn-windows:
 
@@ -12,7 +12,7 @@ The following features are available in ngn-windows:
 - **isAdminUser**: Determines whether the current user has administrative privileges.
 - **service**: A daemon utility. Supports creating Windows services and event logs.
 
-### elevate
+## elevate
 
 Elevate is similar to `sudo` on Linux/Mac. It attempts to elevate the privileges of the 
 curernt user to a local administrator. Using this does not require a password, but it
@@ -31,7 +31,7 @@ On systems with UAC enabled, this may prompt the user for permission to proceed:
 - _options_ (optional): Any options that will be passed to `require('child_process').exec(cmd,<OPTIONS>,callback)`.
 - _callback_ (optional): The callback function passed to `require('child_process').exec(cmd,options,<CALLBACK>)`.
 
-### sudo
+## sudo
 
 Sudo acts similarly to `sudo` on Linux/Mac. Unlike _elevate_, it requires a password, but it 
 will not prompt the user for permission to proceed. Like _elevate_, this 
@@ -47,7 +47,7 @@ The primary difference between this and _elevate()_ is the prompt.
 - _options_ (optional): Any options that will be passed to `require('child_process').exec(cmd,<OPTIONS>,callback)`.
 - _callback_ (optional): The callback function passed to `require('child_process').exec(cmd,options,<CALLBACK>)`.
 
-### isAdminUser
+## isAdminUser
 
 This asynchronous command determines whether the current user has administrative privileges.
 It passes a boolean value to the callback, returning `true` if the user is an administrator
@@ -67,20 +67,20 @@ wincmd.isAdminUser(function(isAdmin){
 });
 ```
 
-### service
+## service
 
 Service is a library for creating and managing Windows services from Node.JS scripts (i.e. daemons).
 
 There are 2 attributes and 4 methods.
 
-**Attributes**
+### Attributes
 
 The `user` attribute is an object with three attributes: `domain`,`account`, and `password`. 
 This can be used to identify which user the service library should use to perform system commands.
 By default, the domain is set to the local system, but it can be overridden with an Active Directory
 or LDAP domain. For example:
 
-File: app.js
+**app.js**
 ```js
 var svc = require('ngn-windows').service;
 
@@ -99,19 +99,19 @@ this, the service module will attempt to run commands using the user account tha
 process and the password for that account. This should only be used for accounts with administrative
 privileges.
 
-File: app.js
+**app.js**
 ```js
 var svc = require('ngn-windows').service;
 
 svc.sudo.password = 'password';
 ...
 ```
----
-**Methods**
+
+### Methods
 
 The service library has 4 methods.
   
-_start(name,filepath[,pidfile,callback])_
+#### .start(name,filepath[,pidfile,callback])
 
 This method will start a node process as a Windows service, which will be visible in the 
 Services panel of Windows, i.e.
@@ -121,7 +121,7 @@ Services panel of Windows, i.e.
 If the service does not already exist, it will be created. Creating a service requires administrative
 privileges, but starting and stopping a service does not.
 
-File: app.js
+**app.js**
 ```js
 var svc = require('ngn-windows').service;
 
@@ -133,16 +133,16 @@ svc.start('My App','C:\path\to\myapp.js',function(){
 Additionally, an event log called `My App` will be created as an Application Log.
 
 
-_stop(name,callback)_
+#### stop(name,callback)
 
 This method will stop a running service that was created with this library (or other nssm.exe 
 processes).
 
-_restart(name[,file,pidfile])_
+#### restart(name[,file,pidfile])
 
 This will restart a service that is currently running.
 
-_remove(name)_
+#### remove(name)
 
 Deletes a service.
 
