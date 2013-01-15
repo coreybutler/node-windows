@@ -2,7 +2,7 @@
   "name": "ngn-windows",
   "version": "0.0.1",
   "description": "Support for Windows",
-  "keywords": [],
+  "keywords": ["ngn","windows"],
   "author": "Corey Butler <corey@coreybutler.com>",
   "devDependencies": {
     "mocha": "*",

@@ -119,7 +119,7 @@ Services panel of Windows, i.e.
 ![Service Panel](http://www.techknowl.com/wp-content/uploads/2009/03/Windows-services-.jpg)
 
 If the service does not already exist, it will be created. Creating a service requires administrative
-privileges, but starting and stopping a service does not.
+privileges, as does removing. Starting/stopping require elevated privileges.
 
 **app.js**
 ```js
