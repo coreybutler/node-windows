@@ -1,1 +1,0 @@
-module.exports = require("./bin/EventLog." + require("os").arch());
