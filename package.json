@@ -1,0 +1,15 @@
+{
+  "name": "ngn-windows",
+  "version": "0.0.1",
+  "description": "Support for Windows",
+  "keywords": [],
+  "author": "Corey Butler <corey@coreybutler.com>",
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "main": "index",
+  "dependencies": {
+    "windows-eventlog": "~0.1.4"
+  }
+}
