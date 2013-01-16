@@ -11,7 +11,7 @@
     "mocha": "*",
     "should": "*"
   },
-  "main": "index",
+  "main": "lib/node-windows.js",
   "dependencies": {
     "windows-eventlog": "~0.1.4"
   },
