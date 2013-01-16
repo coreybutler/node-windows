@@ -2,7 +2,10 @@
   "name": "node-windows",
   "version": "0.0.1",
   "description": "Support for Windows",
-  "keywords": ["ngn","windows"],
+  "keywords": [
+    "ngn",
+    "windows"
+  ],
   "author": "Corey Butler <corey@coreybutler.com>",
   "devDependencies": {
     "mocha": "*",
@@ -11,5 +14,15 @@
   "main": "index",
   "dependencies": {
     "windows-eventlog": "~0.1.4"
-  }
+  },
+  "readmeFilename": "Readme.md",
+  "gitHead": "5d15383c2b724a06ec6e343379fca6f5a75c0117",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coreybutler/node-windows.git"
+  },
+  "license": "MIT"
 }
