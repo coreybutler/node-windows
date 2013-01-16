@@ -1,11 +1,11 @@
-# ngn-windows
+# node-windows
 
   This is a standalone module designed for [NGN](http://github.com/coreybutler/NGN), which
   provides pluggable support for using NGN/Node.JS scripts with Windows.
 
 ## Overview
 
-The following features are available in ngn-windows:
+The following features are available in node-windows:
 
 - **elevate**: Run a command with elevated privileges (may prompt user for acceptance)
 - **sudo**: Run an `exec` command as a sudoer.
@@ -56,7 +56,7 @@ or `false` if it is not.
 **Example**
 
 ```js
-var wincmd = require('ngn-windows');
+var wincmd = require('node-windows');
 
 wincmd.isAdminUser(function(isAdmin){
   if (isAdmin) {
@@ -82,7 +82,7 @@ or LDAP domain. For example:
 
 **app.js**
 ```js
-var svc = require('ngn-windows').service;
+var svc = require('node-windows').service;
 
 svc.user.domain = 'mydomain.local';
 svc.user.acount = 'username';
@@ -101,7 +101,7 @@ privileges.
 
 **app.js**
 ```js
-var svc = require('ngn-windows').service;
+var svc = require('node-windows').service;
 
 svc.sudo.password = 'password';
 ...
@@ -123,7 +123,7 @@ privileges, as does removing. Starting/stopping require elevated privileges.
 
 **app.js**
 ```js
-var svc = require('ngn-windows').service;
+var svc = require('node-windows').service;
 
 svc.start('My App','C:\path\to\myapp.js',function(){
   console.log('Started');
