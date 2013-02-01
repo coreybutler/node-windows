@@ -41,7 +41,7 @@ The primary difference between this and _elevate()_ is the prompt.
 
 **Syntax**:
 
-`elevate(cmd,password[,options,callback])`
+`sudo(cmd,password[,options,callback])`
 
 - _cmd_: The command to execute with elevated privileges. This can be any string that would be typed at the command line.
 - _password_: The password of the user 
