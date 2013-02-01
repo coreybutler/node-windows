@@ -86,7 +86,7 @@ or LDAP domain. For example:
 var svc = require('node-windows').service;
 
 svc.user.domain = 'mydomain.local';
-svc.user.acount = 'username';
+svc.user.account = 'username';
 svc.user.password = 'password';
 ...
 ```
