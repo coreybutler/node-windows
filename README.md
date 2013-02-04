@@ -12,6 +12,8 @@ The following features are available in node-windows:
 - **sudo**: Run an `exec` command as a sudoer.
 - **isAdminUser**: Determines whether the current user has administrative privileges.
 - **service**: A daemon utility. Supports creating Windows services and event logs.
+- **list**: A method to list running windows services.
+- **kill**: A method to kill a specific windows service (by PID).
 
 ## elevate
 
@@ -146,6 +148,66 @@ This will restart a service that is currently running.
 #### remove(name)
 
 Deletes a service.
+
+## list
+
+The list method queries the operating system for a list of running processes.
+
+```js
+var wincmd = require('node-windows');
+
+wincmd.list(function(svc){
+  console.log(svc);
+},true);
+```
+
+This returns an array of the processes running in Windows. Supplying the `true`
+value in the above example provides the list with verbose output. The output is
+specific to the version of the operating system. Here is an example of verbose
+output on a Windows 8 computer.
+
+```js
+[{
+  ImageName: 'cmd.exe',
+  PID: '12440',
+  SessionName: 'Console',
+  'Session#': '1',
+  MemUsage: '1,736 K',
+  Status: 'Unknown',
+  UserName: 'Machine\\Corey',
+  CPUTime: '0:00:00',
+  WindowTitle: 'N/A' 
+},{
+  ImageName: 'tasklist.exe',
+  PID: '1652',
+  SessionName: 'Console',
+  'Session#': '1',
+  MemUsage: '8,456 K',
+  Status: 'Unknown',
+  UserName: 'Machine\\Corey',
+  CPUTime: '0:00:00',
+  WindowTitle: 'N/A' 
+}]
+```
+
+The regualar (non-verbose) output typically provides the `ImageName`,`PID`,`SessionName`,
+`Session#`, `MemUsage`, and `CPUTime`.
+
+## kill
+
+This method will kill a process by `PID`.
+
+
+```js
+var wincmd = require('node-windows');
+
+wincmd.kill(12345,function(){
+  console.log('Process Killed');
+});
+```
+
+In this example, process ID `12345` would be killed. It is important to note that the
+user account executing this node script may require administrative privileges.
 
 # Licenses
 
