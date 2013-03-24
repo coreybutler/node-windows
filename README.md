@@ -38,6 +38,7 @@ itself is over 2GB.
 needed to run more complex tasks is packaged and distributed in binary format. So, no need for
 Visual Studio... at least not for this module.
 
+---
 # Services
 
 node-windows has a utility to run Node.js scripts as Windows services. Please note that like all
@@ -67,7 +68,7 @@ The code above creates a new `Service` object, providing a pretty name and descr
 The `script` attribute identifies the Node.js script that should run as a service. Upon running
 this, the script will be visible from the Windows Services utility.
 
-![Windows Service](./docs/service.png)
+![Windows Service](https://github.com/coreybutler/node-windows/blob/master/docs/service.png)
 
 The `Service` object emits the following events:
 
@@ -241,7 +242,7 @@ log.error('Something went wrong.');
 
 An example:
 
-![Event Logging in node-windows](./docs/eventlog.png)
+![Event Logging in node-windows](https://github.com/coreybutler/node-windows/blob/master/docs/eventlog.png)
 
 Some lesser-used options are also available through node-windows event logging.
 
