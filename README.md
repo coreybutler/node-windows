@@ -1,6 +1,6 @@
 # node-windows
 
-  This is a standalone module, originally designed for internal use in [NGN](http://github.com/coreybutler/NGN).
+  This is a standalone module, originally designed for internal use in [NGN](http://github.com/thinkfirst/NGN).
   However; it is capable of providing the same features for Node.JS scripts
   independently of NGN.
 
@@ -10,11 +10,12 @@ The following features are available in node-windows:
 
 - **Service Management**: Supports creating/managing Windows services and event logs from code. A daemon utility.
 - **Event Logging**: Create logs in the Event log.
-- **Elevated Permissions**: Run a command with elevated privileges (may prompt user for acceptance)
-- **sudo**: Run an `exec` command as a sudoer.
-- **Identify Administrative Privileges**: Determines whether the current user has administrative privileges.
-- **List Tasks**: A method to list running windows tasks/services.
-- **Kill Task**: A method to kill a specific windows service/task (by PID).
+- **Commands**:
+  - _Elevated Permissions_: Run a command with elevated privileges (may prompt user for acceptance)
+  - _sudo_: Run an `exec` command as a sudoer.
+  - _Identify Administrative Privileges_: Determines whether the current user has administrative privileges.
+  - _List Tasks_: A method to list running windows tasks/services.
+  - _Kill Task_: A method to kill a specific windows service/task (by PID).
 
 ## Installation
 
@@ -23,7 +24,7 @@ The recommended way to install node-windows is with npm, using the global flag:
 `npm install -g node-windows`
 
 However; it is possible to use node-windows without the global flag. More details regarding why
-this is not the recommended approach are avialable throughout this Readme.
+this is not the recommended approach are available throughout this Readme.
 
 ## NO NATIVE MODULES
 
