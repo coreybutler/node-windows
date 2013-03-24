@@ -68,7 +68,7 @@ The code above creates a new `Service` object, providing a pretty name and descr
 The `script` attribute identifies the Node.js script that should run as a service. Upon running
 this, the script will be visible from the Windows Services utility.
 
-![Windows Service](https://github.com/coreybutler/node-windows/blob/master/docs/service.png)
+![Windows Service](https://raw.github.com/coreybutler/node-windows/master/docs/service.png)
 
 The `Service` object emits the following events:
 
@@ -242,7 +242,7 @@ log.error('Something went wrong.');
 
 An example:
 
-![Event Logging in node-windows](https://github.com/coreybutler/node-windows/blob/master/docs/eventlog.png)
+![Event Logging in node-windows](https://raw.github.com/coreybutler/node-windows/master/docs/eventlog.png)
 
 Some lesser-used options are also available through node-windows event logging.
 
