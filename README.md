@@ -8,11 +8,11 @@
 
 The following features are available in node-windows:
 
-- **Service Management**: Supports creating/managing Windows services and event logs from code. A daemon utility.
+- **Service Management**: Run Node.js scripts as native Windows services. Includes monitoring.
 - **Event Logging**: Create logs in the Event log.
 - **Commands**:
   - _Elevated Permissions_: Run a command with elevated privileges (may prompt user for acceptance)
-  - _sudo_: Run an `exec` command as a sudoer.
+  - _Sudo_: Run an `exec` command as a sudoer.
   - _Identify Administrative Privileges_: Determines whether the current user has administrative privileges.
   - _List Tasks_: A method to list running windows tasks/services.
   - _Kill Task_: A method to kill a specific windows service/task (by PID).
@@ -30,16 +30,17 @@ this is not the recommended approach are available throughout this Readme.
 
 Using native node modules on Windows can suck. Most native modules are not distributed in a binary format.
 Instead, these modules rely on `npm` to build the project, utilizing [node-gyp](https://github.com/TooTallNate/node-gyp).
-This means developers need to have Visual Studio and potentiall other software installed on the system,
+This means developers need to have Visual Studio (and potentially other software) installed on the system,
 just to install a native module. This is portable, but painful... mostly because Visual Studio
 itself is over 2GB.
 
-**node-windows does not use native modules.** There are some executable tools, but everything
-needed to run more complex tasks is packaged and distributed in binary format. So, no need for
+**node-windows does not use native modules.** There are some binary/exe utilities, but everything
+needed to run more complex tasks is packaged and distributed in a readily usable format. So, no need for
 Visual Studio... at least not for this module.
 
 ---
-# Services
+
+# Windows Services
 
 node-windows has a utility to run Node.js scripts as Windows services. Please note that like all
 Windows services, creating one requires administrative privileges. To create a service with
@@ -84,16 +85,17 @@ is fired when a service installation is complete, it is safe to start the servic
 
 Services created by node-windows are similar to most other services running on Windows.
 They can be started/stopped from the windows service utility, via `NET START` or `NET STOP` commands,
-or even managed using the [sc](http://technet.microsoft.com/en-us/library/dd228922(v=ws.10).aspx)
+or even managed using the <a href="http://technet.microsoft.com/en-us/library/dd228922(v=ws.10).aspx">sc</a>
 utility.
 
-### Attributes
+### User Account Attributes
 
-Services can have several attributes associate with them to assist in their management.
+If you need to specify a specific user or particular credentials to manage a service, the following
+attributes may be helpful.
 
-The `user` attribute is an object with three attributes: `domain`,`account`, and `password`.
+The `user` attribute is an object with three keys: `domain`,`account`, and `password`.
 This can be used to identify which user the service library should use to perform system commands.
-By default, the domain is set to the local system, but it can be overridden with an Active Directory
+By default, the domain is set to the local computer name, but it can be overridden with an Active Directory
 or LDAP domain. For example:
 
 **app.js**
@@ -135,9 +137,9 @@ svc.sudo.password = 'password';
 ...
 ```
 
-### Cleaning Up
+### Cleaning Up: Uninstall a Service
 
-Uninstalling a previously created service is similar to installation.
+Uninstalling a previously created service is syntactically similar to installation.
 
 ```js
 var Service = require('node-windows').Service;
@@ -160,18 +162,24 @@ svc.uninstall();
 
 The uninstall process only removes process-specific files. **It does NOT delete your Node.js script!**
 
-### What Makes node-windows Services Unique
+### What Makes node-windows Services Unique?
+
+Lots of things!
+
+**Long Running Processes & Monitoring:**
 
 The built-in service recovery for Windows services is fairly limited and cannot easily be configured
-from code. Therefore, node-windows creates a wrapper around the Node.js script. This process
-is responsible for restarting the process in an intelligent and configurable manner. For example,
+from code. Therefore, node-windows creates a wrapper around the Node.js script. This wrapper
+is responsible for restarting a failed service in an intelligent and configurable manner. For example,
 if your script crashes due to an unknown error, node-windows will attempt to restart it. By default,
 this occurs every second. However; if the script has a fatal flaw that makes it crash repeatedly,
 it adds unnecessary overhead to the system. node-windows handles this by increasing the time interval
 between restarts and capping the maximum number of restarts.
 
-Using the default settings, node-windows adds 25% to the wait time each time it needs to restart
-the script. With the default settings (1 second), the first restart attempt occurs after one second.
+**Smarter Restarts That Won't Pummel Your Server:**
+
+Using the default settings, node-windows adds 25% to the wait interval each time it needs to restart
+the script. With the default setting (1 second), the first restart attempt occurs after one second.
 The second occurs after 1.25 seconds. The third after 1.31 seconds (1.25 increased by 25%) and so on.
 Both the initial wait time and the growth rate are configuration options that can be passed to a new
 `Service`. For example:
@@ -189,13 +197,15 @@ var svc = new Service({
 In this example, the wait period will start at 2 seconds and increase by 50%. So, the second attempt
 would be 3 seconds later while the fourth would be 4.5 seconds later.
 
-This cycle could potentially go on forever with a bad script. To handle these situations, node-windows
+**Don't DOS Yourself!**
+
+Repetitive recycling could potentially go on forever with a bad script. To handle these situations, node-windows
 supports two kinds of caps. Using `maxRetries` will cap the maximum number of restart attempts. By
 default, this is unlimited. Setting it to 3 would tell the process to no longer restart a process
 after it has failed 3 times. Another option is `maxRestarts`, which caps the number of restarts attempted
 within 60 seconds. For example, if this is set to 3 (the default) and the process crashes/restarts repeatedly,
 node-windows will cease restart attempts after the 3rd cycle in a 60 second window. Both of these
-configuration options can be set, just like `wait` or `grow`, when you create a `Service` object.
+configuration options can be set, just like `wait` or `grow`.
 
 Finally, an attribute called `abortOnError` can be set to `true` if you want your script to **not** restart
 at all when it exits with an error.
@@ -223,6 +233,8 @@ when the entire service starts/stops or has errors. A second log, named after yo
 is used by the node-windows monitor. It is possible to write to this log from the Node.js script using
 the node-windows Event Logging.
 
+---
+
 # Event Logging
 
 New as of `v0.1.0` is a _non-C++_ based event logging utility. This utility can write to the event log,
@@ -233,14 +245,14 @@ To create a logger:
 ```js
 var EventLogger = require('node-windows').EventLogger;
 
-var log = new EventLogger('My Event Log');
+var log = new EventLogger('Hello World');
 
 log.info('Basic information.');
 log.warn('Watch out!');
 log.error('Something went wrong.');
 ```
 
-An example:
+Looks similar to:
 
 ![Event Logging in node-windows](https://raw.github.com/coreybutler/node-windows/master/docs/eventlog.png)
 
@@ -273,6 +285,8 @@ var log = new EventLogger({
 });
 ```
 
+---
+
 # Commands
 
 node-windows ships with several commands to simplify tasks on MS Windows.
@@ -280,7 +294,7 @@ node-windows ships with several commands to simplify tasks on MS Windows.
 ## elevate
 
 Elevate is similar to `sudo` on Linux/Mac. It attempts to elevate the privileges of the
-curernt user to a local administrator. Using this does not require a password, but it
+current user to a local administrator. Using this does not require a password, but it
 does require that the current user have administrative privileges. Without these
 privileges, the command will fail with a `access denied` error.
 
@@ -344,8 +358,8 @@ wincmd.list(function(svc){
 },true);
 ```
 
-This returns an array of the processes running in Windows. Supplying the `true`
-value in the above example provides the list with verbose output. The output is
+This returns an array of running processes. Supplying the optional `true`
+argument in the above example provides a list with verbose output. The output is
 specific to the version of the operating system. Here is an example of verbose
 output on a Windows 8 computer.
 
