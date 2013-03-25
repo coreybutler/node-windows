@@ -4,7 +4,15 @@
   "description": "Support for Windows",
   "keywords": [
     "ngn",
-    "windows"
+    "windows",
+    "service",
+    "daemon",
+    "logging",
+    "event",
+    "event logging",
+    "elevate",
+    "sudo",
+    "task"
   ],
   "author": "Corey Butler <corey@coreybutler.com>",
   "devDependencies": {
@@ -13,7 +21,6 @@
   },
   "main": "lib/node-windows.js",
   "dependencies": {
-    "windows-eventlog": "~0.1.4",
     "optimist": "~0.3.5"
   },
   "readmeFilename": "Readme.md",
