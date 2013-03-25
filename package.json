@@ -23,8 +23,7 @@
   "dependencies": {
     "optimist": "~0.3.5"
   },
-  "readmeFilename": "Readme.md",
-  "gitHead": "5d15383c2b724a06ec6e343379fca6f5a75c0117",
+  "readmeFilename": "README.md",
   "scripts": {
     "test": "mocha"
   },
