@@ -1,7 +1,7 @@
 {
   "name": "node-windows",
   "version": "0.1.0",
-  "description": "Support for Windows",
+  "description": "Support for Windows services, event logging, UAC, and several helper methods for interacting with the OS.",
   "keywords": [
     "ngn",
     "windows",
@@ -15,18 +15,13 @@
     "task"
   ],
   "author": "Corey Butler <corey@coreybutler.com>",
-  "devDependencies": {
-    "mocha": "*",
-    "should": "*"
-  },
+  "devDependencies": {},
   "main": "lib/node-windows.js",
   "dependencies": {
     "optimist": "~0.3.5"
   },
   "readmeFilename": "README.md",
-  "scripts": {
-    "test": "mocha"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/coreybutler/node-windows.git"
