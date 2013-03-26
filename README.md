@@ -75,6 +75,7 @@ The `Service` object emits the following events:
 
 - _install_ - Fired when the script is installed as a service.
 - _alreadyinstalled_ - Fired if the script is already known to be a service.
+- _invalidinstallation_ - Fired if an installation is detected but missing required files.
 - _uninstall_ - Fired when an uninstallation is complete.
 - _start_ - Fired when the new service is started.
 - _stop_ - Fired when the service is stopped.
@@ -405,6 +406,18 @@ wincmd.kill(12345,function(){
 
 In this example, process ID `12345` would be killed. It is important to note that the
 user account executing this node script may require administrative privileges.
+
+# Troubleshooting
+
+If you're experiencing issues with the examples, please review the `TESTS.md` file.
+
+If you are encountering the _invalidinstallation_ event, take a look at the `daemon`
+directory that is created during the installation to make sure the `.exe` and `.xml`
+files are there. In some circumstances, primarily during _un_installation, it is
+possbile for the process to temporarily lock a log file, which prevents Windows
+from removing it. In this scenario, simply run the uninstall again. In most cases this
+will fix the issue. If not, manually remove the `daemon` directory before running the
+installation again.
 
 # Licenses
 
