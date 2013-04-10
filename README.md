@@ -181,7 +181,7 @@ between restarts and capping the maximum number of restarts.
 
 Using the default settings, node-windows adds 25% to the wait interval each time it needs to restart
 the script. With the default setting (1 second), the first restart attempt occurs after one second.
-The second occurs after 1.25 seconds. The third after 1.31 seconds (1.25 increased by 25%) and so on.
+The second occurs after 1.25 seconds. The third after 1.56 seconds (1.25 increased by 25%) and so on.
 Both the initial wait time and the growth rate are configuration options that can be passed to a new
 `Service`. For example:
 
