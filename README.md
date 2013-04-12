@@ -89,6 +89,40 @@ They can be started/stopped from the windows service utility, via `NET START` or
 or even managed using the <a href="http://technet.microsoft.com/en-us/library/dd228922(v=ws.10).aspx">sc</a>
 utility.
 
+### Environment Variables
+
+Sometimes you may want to provide a service with static data, passed in on creation of the service. You can do this by setting environment variables in the service config, as shown below:
+
+```js
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  env: {
+    name: "HOME",
+    value: process.env["USERPROFILE"] // service is now able to access the user who created its' home directory
+  }
+});
+```
+You can also supply an array to set multiple environment variables:
+
+```js
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  env: [{
+    name: "HOME",
+    value: process.env["USERPROFILE"] // service is now able to access the user who created its' home directory
+  },
+  {
+    name: "TEMP",
+    value: path.join(process.env["USERPROFILE"],"/temp") // use a temp directory in user's home directory
+  }]
+});
+```
+
+
 ### User Account Attributes
 
 If you need to specify a specific user or particular credentials to manage a service, the following
@@ -136,7 +170,7 @@ var svc = new Service({
 
 svc.sudo.password = 'password';
 ...
-```
+``` 
 
 ### Cleaning Up: Uninstall a Service
 
