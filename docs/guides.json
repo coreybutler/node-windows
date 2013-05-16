@@ -1,0 +1,12 @@
+[{
+  "title": "Node Windows",
+  "items": [{
+    "name": "nodeWindowsService",
+    "title": "Services",
+    "description": "Create Windows (background) services from your node.js scripts."
+  },{
+    "name": "nodewindowstroubleshooting",
+    "title": "Troubleshooting",
+    "description": "Having problems? Check here for answers."
+  }]
+}]

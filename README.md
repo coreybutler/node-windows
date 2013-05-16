@@ -1,3 +1,6 @@
+This README provides a pretty good overview of what node-windows has to offer, but better
+documentation is now available at the [node-windows documentation portal](http://coreybutler.github.io/node-windows).
+
 # node-windows
 
   This is a standalone module, originally designed for internal use in [NGN](http://github.com/thinkfirst/NGN).
@@ -170,7 +173,7 @@ var svc = new Service({
 
 svc.sudo.password = 'password';
 ...
-``` 
+```
 
 ### Cleaning Up: Uninstall a Service
 

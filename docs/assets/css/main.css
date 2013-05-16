@@ -1,0 +1,23 @@
+#header-content {
+  background: url(../images/windows8.png) 0 0 no-repeat !important;
+}
+#north-region  {
+  background-color: #0050EF !important;
+  background-image: none !important;
+}
+#content hr {
+  height: 0;
+  border: 0px;
+  border-top: 1px solid #EFEFEF;
+  margin: 15px 0 15px 0;
+}
+#content li {
+  margin: 3px 0 0px 25px;
+  list-style-type: square !important;
+}
+#content ol li {
+  list-style-type:upper-roman;
+}
+#content h1 {
+  margin: 0 0 8px 0;
+}

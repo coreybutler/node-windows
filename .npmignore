@@ -1,4 +1,5 @@
 support
 test
 docs
+Gruntfile.js
 *.sock
