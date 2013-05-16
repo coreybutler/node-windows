@@ -20,10 +20,14 @@
 
 module.exports = {
 
-<span id='global-method-isAdminUser'>  /**
+<span id='nodewindows-method-isAdminUser'>  /**
 </span>   * @method isAdminUser
-   * Determines whether the current working user is an administrator.
+   * @member nodewindows
+   * This asynchronous command determines whether the current user has administrative privileges.
+   * It passes a boolean value to the callback, returning `true` if the user is an administrator
+   * or `false` if it is not.
    * @param {Function} callback
+   * @param {Boolean} callback.isAdmin
    * Receives true/false as an argument to the callback.
    */
   isAdminUser: function(callback){
@@ -38,14 +42,15 @@ module.exports = {
     });
   },
 
-<span id='global-method-kill'>  /**
+<span id='nodewindows-method-kill'>  /**
 </span>   * @method kill
+   * @member nodewindows
    * Kill a specific process
    * @param {Number} PID
    * Process ID
-   * @param {Boolean} force
+   * @param {Boolean} [force=false]
    * Force close the process.
-   * @param {Function} callback
+   * @param {Function} [callback]
    */
   kill: function(pid,force,callback){
     if (!pid){
@@ -59,12 +64,13 @@ module.exports = {
     exec(&quot;taskkill /PID &quot;+pid+(force==true?' /f':''),callback);
   },
 
-<span id='global-method-list'>  /**
+<span id='nodewindows-method-list'>  /**
 </span>   * @method list
+   * @member nodewindows
    * List the processes running on the server.
    * @param {Function} callback
    * Receives the process object as the only callback argument
-   * @param {Boolean} verbose
+   * @param {Boolean} [verbose=false]
    */
   list: function(callback,verbose){
     verbose = typeof verbose == 'boolean' ? verbose : false;

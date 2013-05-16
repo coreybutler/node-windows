@@ -15,7 +15,50 @@
   </script>
 </head>
 <body onload="prettyPrint(); highlight();">
-  <pre class="prettyprint lang-js">var wincmd = require('./binaries'),
+  <pre class="prettyprint lang-js"><span id='nodewindows-EventLogger'>/**
+</span> * @class nodewindows.EventLogger
+ * @since 0.1.0
+ * Use a _non-C++_ based event logging utility with your Windows code.
+ * This utility can write to the event log, making your logs visible from the Event Viewer.
+ *
+ * To create a logger:
+ *
+ *     var EventLogger = require('node-windows').EventLogger;
+ *
+ *     var log = new EventLogger('Hello World');
+ *
+ *     log.info('Basic information.');
+ *     log.warn('Watch out!');
+ *     log.error('Something went wrong.');
+ *
+ * Looks similar to:
+ *
+ * ![Event Logging in node-windows](https://raw.github.com/coreybutler/node-windows/master/docs/eventlog.png)
+ *
+ * Some lesser-used options are also available through node-windows event logging.
+ *
+ *    log.auditSuccess('AUser Login Success');
+ *    log.auditFailure('AUser Login Failure');
+ *
+ * Each log type (info, warn, error, auditSuccess, and auditFailure) method optionally accepts two additional
+ * arguments, including a _code_ and _callback_. By default, the event code is `1000` if not otherwise specified.
+ * To provide a custom event code with a log message and write that message to the console, the following code could
+ * be used:
+ *
+ *     log.info('Something different happened!', 1002, function(){
+ *       console.log('Something different happened!');
+ *     });
+ *
+ * By default, event logs are all part of the `APPLICATION` scope. However; it is also possible to use the `SYSTEM` log.
+ * To do this, a configuration object must be passed to the new log:
+ *
+ *     var EventLogger = require('node-windows').EventLogger;
+ *     var log = new EventLogger({
+ *       source: 'My Event Log',
+ *       eventLog: 'SYSTEM'
+ *     });
+ */
+var wincmd = require('./binaries'),
     eventlogs = ['APPLICATION','SYSTEM'],
     validtypes = ['ERROR','WARNING','INFORMATION','SUCCESSAUDIT','FAILUREAUDIT'];
 
@@ -49,7 +92,7 @@ var logger = function(config){
   // Common attributes
   Object.defineProperties(this,{
 
-<span id='global-cfg-name'>    /**
+<span id='nodewindows-EventLogger-cfg-name'>    /**
 </span>     * @cfg {String} [name=Node.js]
      * The source of the log information. This is commonly the title of an application
      * or the Node.js script name (i.e. MyApp).
@@ -68,7 +111,7 @@ var logger = function(config){
       value: config.eventLog || 'APPLICATION'
     },
 
-<span id='global-cfg-eventLog'>    /**
+<span id='nodewindows-EventLogger-cfg-eventLog'>    /**
 </span>     * @cfg {String} [eventLog=APPLICATION]
      * The event log where messages should be written. This is either `APPLICATION` or `SYSTEM`.
      */
@@ -84,7 +127,7 @@ var logger = function(config){
       }
     },
 
-<span id='global-method-info'>    /**
+<span id='nodewindows-EventLogger-method-info'>    /**
 </span>     * @method info
      * Log an informational message.
      * @param {String} message
@@ -110,7 +153,7 @@ var logger = function(config){
       }
     },
 
-<span id='global-method-error'>    /**
+<span id='nodewindows-EventLogger-method-error'>    /**
 </span>     * @method error
      * Log an error message.
      * @param {String} message
@@ -129,7 +172,7 @@ var logger = function(config){
       }
     },
 
-<span id='global-method-warn'>    /**
+<span id='nodewindows-EventLogger-method-warn'>    /**
 </span>     * @method warn
      * Log a warning message.
      * @param {String} message
@@ -153,7 +196,7 @@ var logger = function(config){
       get: function(){return this.warn;}
     },
 
-<span id='global-method-auditSuccess'>    /**
+<span id='nodewindows-EventLogger-method-auditSuccess'>    /**
 </span>     * @method auditSuccess
      * Log an audit success message.
      * @param {String} message
@@ -172,7 +215,7 @@ var logger = function(config){
       }
     },
 
-<span id='global-method-auditFailure'>    /**
+<span id='nodewindows-EventLogger-method-auditFailure'>    /**
 </span>     * @method auditFailure
      * Log an audit failure message.
      * @param {String} message

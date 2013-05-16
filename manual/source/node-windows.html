@@ -15,7 +15,24 @@
   </script>
 </head>
 <body onload="prettyPrint(); highlight();">
-  <pre class="prettyprint lang-js">if (require('os').platform().indexOf('win') &lt; 0){
+  <pre class="prettyprint lang-js"><span id='nodewindows'>/**
+</span> * @class nodewindows
+ * This is a standalone module, originally designed for internal use in [NGN](http://github.com/thinkfirst/NGN).
+ * However; it is capable of providing the same features for Node.JS scripts
+ * independently of NGN.
+ *
+ * ### Getting node-windows
+ *
+ * `npm install -g node-windows`
+ *
+ * ### Using node-windows
+ *
+ * `var nw = require('node-windows');`
+ *
+ * @singleton
+ * @author Corey Butler
+ */
+if (require('os').platform().indexOf('win') &lt; 0){
   throw 'ngn-windows is only supported on Windows.';
 }
 

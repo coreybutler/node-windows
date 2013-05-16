@@ -1,0 +1,14 @@
+.console {
+	-moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  behavior: url(/assets/css/border-radius.htc);
+  border-radius: 20px;
+  position: relative;
+  zoom: 1;
+  background-color: #000000;
+  color: #eeeeee;
+  font-family: Monaco, Consolas, Arial, Helvetica, Sans-Serif;
+  border: 1px solid #888888;
+  border-top: 16px solid #888888;
+}
