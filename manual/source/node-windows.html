@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">if (require('os').platform().indexOf('win') &lt; 0){
+  throw 'ngn-windows is only supported on Windows.';
+}
+
+// Add binary invokers
+module.exports = require('./binaries');
+
+// Add command line shortcuts
+var commands = require('./cmd');
+for (var item in commands){
+  module.exports[item] = commands[item];
+}
+
+// Add daemon management capabilities
+module.exports.Service = require('./daemon');
+module.exports.EventLogger = require('./eventlog');
+</pre>
+</body>
+</html>

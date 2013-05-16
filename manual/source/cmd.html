@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">var exec = require('child_process').exec,
+    bin = require('./binaries');
+
+module.exports = {
+
+<span id='global-method-isAdminUser'>  /**
+</span>   * @method isAdminUser
+   * Determines whether the current working user is an administrator.
+   * @param {Function} callback
+   * Receives true/false as an argument to the callback.
+   */
+  isAdminUser: function(callback){
+    exec('NET SESSION',function(err,so,se){
+      if (se.length !== 0){
+        bin.elevate('NET SESSION',function(_err,_so,_se){
+          callback(_se.length === 0);
+        });
+      } else {
+        callback(true);
+      }
+    });
+  },
+
+<span id='global-method-kill'>  /**
+</span>   * @method kill
+   * Kill a specific process
+   * @param {Number} PID
+   * Process ID
+   * @param {Boolean} force
+   * Force close the process.
+   * @param {Function} callback
+   */
+  kill: function(pid,force,callback){
+    if (!pid){
+      throw new Error('PID is required for the kill operation.');
+    }
+    callback = callback || function(){};
+    if (typeof force == 'function'){
+      callback = force;
+      force = false;
+    }
+    exec(&quot;taskkill /PID &quot;+pid+(force==true?' /f':''),callback);
+  },
+
+<span id='global-method-list'>  /**
+</span>   * @method list
+   * List the processes running on the server.
+   * @param {Function} callback
+   * Receives the process object as the only callback argument
+   * @param {Boolean} verbose
+   */
+  list: function(callback,verbose){
+    verbose = typeof verbose == 'boolean' ? verbose : false;
+    exec('tasklist /FO CSV'+(verbose==true?' /V':''),function(err,stdout,stderr){
+      var p = stdout.split('\r\n');
+      var proc = [];
+      var head = null;
+      while (p.length &gt; 1){
+        var rec = p.shift();
+        rec = rec.replace(/\&quot;\,/gi,'&quot;;').replace(/\&quot;|\'/gi,'').split(';');
+        if (head == null){
+          head = rec;
+          for (var i=0;i&lt;head.length;i++){
+            head[i] = head[i].replace(/ /gi,'');
+          }
+        } else {
+          var tmp = {};
+          for (var i=0;i&lt;rec.length;i++){
+            tmp[head[i]] = rec[i].replace(/\&quot;|\'/gi,'');
+          }
+          proc.push(tmp);
+        }
+      }
+      callback(proc);
+    });
+  }
+
+};</pre>
+</body>
+</html>

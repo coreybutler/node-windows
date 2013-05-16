@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">var path = require('path'),
+    bin = path.join(__dirname,'..','bin'),
+    exec = require('child_process').exec;
+
+var params = function(options,callback) {
+  callback = callback || function(){};
+  options = options || {};
+  if (typeof options === 'function'){
+    callback = options;
+    options = {};
+  }
+  if (typeof options !== 'object'){
+    throw 'Invalid options parameter.';
+  }
+  return {options:options,callback:callback}; 
+}
+
+module.exports = {
+  elevate: function(cmd,options,callback) {
+    var p = params(options,callback);
+    exec('&quot;'+path.join(bin,'elevate','elevate.cmd')+'&quot; '+cmd,p.options,p.callback);
+  },
+  
+  sudo: function(cmd,password,options,callback){
+    password = password || '';
+    if (typeof password !== 'string'){
+      callback = options;
+      options = password;
+      password = '';
+    }
+    var p = params(otions,callback);
+    exec(path.join(bin,'sudowin','sudo.exe')+' '+(password !== '' ? '-p '+password:'')+cmd,p.options,p.callback);
+  }
+}</pre>
+</body>
+</html>
