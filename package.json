@@ -1,6 +1,6 @@
 {
   "name": "node-windows",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Support for Windows services, event logging, UAC, and several helper methods for interacting with the OS.",
   "keywords": [
     "ngn",
@@ -17,6 +17,8 @@
   "author": "Corey Butler <corey@coreybutler.com>",
   "devDependencies": {},
   "main": "lib/node-windows.js",
+  "os": ["win32"],
+  "preferGlobal": true,
   "dependencies": {
     "optimist": "~0.3.5"
   },

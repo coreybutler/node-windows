@@ -1,0 +1,5 @@
+2013-03-25 08:09:53 - Starting node.exe --harmony "C:\Users\Corey\Documents\workspace\node-windows\lib\wrapper.js" -f "C:\Users\Corey\Documents\workspace\node-windows\example\helloworld.js" -l "Hello World" -g 0.25 -w 1 -r 3 -a n
+2013-03-25 08:09:53 - Started 11632
+2013-03-25 08:10:30 - Stopping helloworld.exe
+2013-03-25 08:10:30 - ProcessKill 11632
+2013-03-25 08:10:30 - Finished helloworld.exe
