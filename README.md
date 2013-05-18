@@ -1,3 +1,5 @@
+[![NPM version](https://badge.fury.io/js/node-windows.png)](http://badge.fury.io/js/node-windows)
+
 This README provides a pretty good overview of what node-windows has to offer, but better
 documentation is now available at the [node-windows documentation portal](http://coreybutler.github.io/node-windows).
 
