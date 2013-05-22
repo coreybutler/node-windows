@@ -105,7 +105,7 @@ var svc = new Service({
   script: 'C:\\path\\to\\helloworld.js',
   env: {
     name: "HOME",
-    value: process.env["USERPROFILE"] // service is now able to access the user who created its' home directory
+    value: process.env["USERPROFILE"] // service is now able to access the user who created its home directory
   }
 });
 ```
@@ -118,7 +118,7 @@ var svc = new Service({
   script: 'C:\\path\\to\\helloworld.js',
   env: [{
     name: "HOME",
-    value: process.env["USERPROFILE"] // service is now able to access the user who created its' home directory
+    value: process.env["USERPROFILE"] // service is now able to access the user who created its home directory
   },
   {
     name: "TEMP",
@@ -228,7 +228,7 @@ Both the initial wait time and the growth rate are configuration options that ca
 var svc = new Service({
   name:'Hello World',
   description: 'The nodejs.org example web server.',
-  script: 'C:\\path\\to\\helloworld.js'),
+  script: 'C:\\path\\to\\helloworld.js',
   wait: 2,
   grow: .5
 });
