@@ -58,7 +58,7 @@ var Service = require('node-windows').Service;
 var svc = new Service({
   name:'Hello World',
   description: 'The nodejs.org example web server.',
-  script: 'C:\\path\\to\\helloworld.js')
+  script: 'C:\\path\\to\\helloworld.js'
 });
 
 // Listen for the "install" event, which indicates the
