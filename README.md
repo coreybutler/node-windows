@@ -1,4 +1,9 @@
 [![NPM version](https://badge.fury.io/js/node-windows.png)](http://badge.fury.io/js/node-windows)
+[![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.png)](https://david-dm.org/coreybutler/node-windows)
+[![Build](https://api.travis-ci.org/coreybutler/node-windows.png)](https://travis-ci.org/coreybutler/node-windows)
+
+Follow the author on <a href="https://plus.google.com/u/1/111169756342687497578?rel=author">G+</a>
+or <a href="http://twitter.com/goldglovecb">Twitter (@goldglovecb)</a>.
 
 This README provides a pretty good overview of what node-windows has to offer, but better
 documentation is now available at the [node-windows documentation portal](http://coreybutler.github.io/node-windows).
@@ -487,8 +492,3 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-# Author
-
-You can find me on <a href="https://plus.google.com/u/1/111169756342687497578?rel=author">G+</a>,
-or follow me on Twitter as <a href="http://twitter.com/goldglovecb">@goldglovecb</a>.
