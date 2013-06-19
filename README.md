@@ -2,8 +2,8 @@
 [![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.png)](https://david-dm.org/coreybutler/node-windows)
 [![Build](https://api.travis-ci.org/coreybutler/node-windows.png)](https://travis-ci.org/coreybutler/node-windows)
 
-Follow the author on <a href="https://plus.google.com/u/1/111169756342687497578?rel=author">G+</a>
-or <a href="http://twitter.com/goldglovecb">Twitter (@goldglovecb)</a>.
+Follow the author on [G+](https://plus.google.com/u/1/111169756342687497578?rel=author)
+or [Twitter (@goldglovecb)](http://twitter.com/goldglovecb).
 
 This README provides a pretty good overview of what node-windows has to offer, but better
 documentation is now available at the [node-windows documentation portal](http://coreybutler.github.io/node-windows).
@@ -13,6 +13,10 @@ documentation is now available at the [node-windows documentation portal](http:/
   This is a standalone module, originally designed for internal use in [NGN](http://github.com/thinkfirst/NGN).
   However; it is capable of providing the same features for Node.JS scripts
   independently of NGN.
+
+  For alternative versions, see [node-mac](http://github.com/coreybutler/node-mac)
+  and [node-linux](http://github.com/coreybutler/node-linux)
+
 
 ## Overview
 
