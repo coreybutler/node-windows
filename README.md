@@ -487,3 +487,8 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+# Author
+
+You can find me on <a href="https://plus.google.com/u/1/111169756342687497578?rel=author">G+</a>,
+or follow me on Twitter as <a href="http://twitter.com/goldglovecb">@goldglovecb</a>.

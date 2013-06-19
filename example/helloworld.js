@@ -9,6 +9,7 @@ server.listen(3000, '127.0.0.1');
 console.log('Server running at http://127.0.0.1:3000/');
 
 // Force the process to close after 15 seconds
-setTimeout(function(){
+/*setTimeout(function(){
   process.exit();
 },15000);
+*/

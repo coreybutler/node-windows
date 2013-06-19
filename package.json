@@ -29,5 +29,5 @@
     "url": "git://github.com/coreybutler/node-windows.git"
   },
   "license": "MIT",
-  "engine":"node >= 0.10.1"
+  "engine":"node >= 0.10.10"
 }
