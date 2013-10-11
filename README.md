@@ -37,7 +37,7 @@ The recommended way to install node-windows is with npm, using the global flag:
 
 `npm install -g node-windows`
 
-Then run
+Then, in your project roo, run:
 
 `npm link node-windows`
 
