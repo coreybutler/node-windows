@@ -37,8 +37,12 @@ The recommended way to install node-windows is with npm, using the global flag:
 
 `npm install -g node-windows`
 
-However; it is possible to use node-windows without the global flag. More details regarding why
-this is not the recommended approach are available throughout this Readme.
+Then run
+
+`npm link node-windows`
+
+However; it is possible to use node-windows without the global flag (i.e. install directly into the project root). 
+More details regarding why this is not the recommended approach are available throughout this Readme.
 
 ## NO NATIVE MODULES
 
