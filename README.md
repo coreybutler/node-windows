@@ -1,3 +1,11 @@
+# Update (2/18/14)
+
+**tl;dr - Many updates made, more coming. Delayed for a good reason.**
+
+Since there has been more recent activity and a lot of requests/PR's recently, I figured I should address whats going on with node-windows. I have completed a lot of work on the next version & I'm trying to incorporate as much as I can into that version. Additionally, I have recently built a Windows network where CI will be happening in an effort to make it easier to contribute according to guidelines that suit all of the node-* projects.
+
+I also wanted to address the delays so folks know this project is far from abandoned. Under normal circumstances, issues and features would be fixed/released more regularly. However; over the last several months, I have been primarily preoccupied with my fiance's health. She was struck by a truck who ignored a stop sign (auto vs pedestrian). She is OK, but an extraordinary amount of time has been consumed with doctors/PT/ART/etc. What little time I've had has been dedicated to client contracts. I believe we're starting to reach a point where the schedule may ease up a bit, at which point I will have significantly more time to put into this project and the others. 
+
 # Update (11/10/13)
 
 **tl;dr - Updates in progress.**
