@@ -1,6 +1,6 @@
 # Update (9/11/14)
 
-This project, along with node-mac and node-linux has undergone a couple of refactors. A new an improved version (which should be backwards compatible) is under construction right now. In the meantime, I have merged several of the PR's and bumped the version on npm.
+This project, along with node-mac and node-linux has undergone a couple of refactors. A new and improved version (which should be backwards compatible) is under construction right now. In the meantime, I have merged several of the PR's and bumped the version on npm.
 
 # Update (2/18/14)
 
