@@ -1,5 +1,7 @@
 # Update (9/11/14)
 
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/coreybutler/node-windows?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This project, along with node-mac and node-linux has undergone a couple of refactors. A new and improved version (which should be backwards compatible) is under construction right now. In the meantime, I have merged several of the PR's and bumped the version on npm.
 
 # Update (2/18/14)
