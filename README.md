@@ -1,16 +1,8 @@
-# Update (9/11/14)
+# Update (5/21/15)
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/coreybutler/node-windows?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This project, along with node-mac and node-linux has undergone a couple of refactors. A new and improved version (which should be backwards compatible) is under construction right now. In the meantime, I have merged several of the PR's and bumped the version on npm.
-
-# Update (2/18/14)
-
-**tl;dr - Many updates made, more coming. Delayed for a good reason.**
-
-Since there has been more recent activity and a lot of requests/PR's recently, I figured I should address whats going on with node-windows. I have completed a lot of work on the next version & I'm trying to incorporate as much as I can into that version. Additionally, I have recently built a Windows network where CI will be happening in an effort to make it easier to contribute according to guidelines that suit all of the node-* projects.
-
-I also wanted to address the delays so folks know this project is far from abandoned. Under normal circumstances, issues and features would be fixed/released more regularly. However; over the last several months, I have been primarily preoccupied with my fiance's health. She was struck by a truck who ignored a stop sign (auto vs pedestrian). She is OK, but an extraordinary amount of time has been consumed with doctors/PT/ART/etc. What little time I've had has been dedicated to client contracts. I believe we're starting to reach a point where the schedule may ease up a bit, at which point I will have significantly more time to put into this project and the others. 
+The number of issues between this project and it's sister projects ((node-mac)[https://github.com/coreybutler/node-mac] & (node-mac)[https://github.com/coreybutler/node-linux]) are accruing at a rate that deserves more attention than I can provide on my own. I'm actively looking for maintainers to help run this project. Please get in touch via gitter if you're interested. 
 
 [![NPM version](https://badge.fury.io/js/node-windows.png)](http://badge.fury.io/js/node-windows)
 [![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.png)](https://david-dm.org/coreybutler/node-windows)
