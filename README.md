@@ -2,7 +2,7 @@
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/coreybutler/node-windows?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-The number of issues between this project and it's sister projects ((node-mac)[https://github.com/coreybutler/node-mac] & (node-mac)[https://github.com/coreybutler/node-linux]) are accruing at a rate that deserves more attention than I can provide on my own. I'm actively looking for maintainers to help run this project. Please get in touch via gitter if you're interested. 
+The number of issues between this project and it's sister projects ((node-mac)[https://github.com/coreybutler/node-mac] & (node-mac)[https://github.com/coreybutler/node-linux]) are accruing at a rate that deserves more attention than I can provide on my own. I'm actively looking for maintainers to help run this project. Please get in touch via gitter if you're interested.
 
 [![NPM version](https://badge.fury.io/js/node-windows.png)](http://badge.fury.io/js/node-windows)
 [![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.png)](https://david-dm.org/coreybutler/node-windows)
@@ -47,7 +47,7 @@ Then, in your project root, run:
 
 `npm link node-windows`
 
-However; it is possible to use node-windows without the global flag (i.e. install directly into the project root). 
+However; it is possible to use node-windows without the global flag (i.e. install directly into the project root).
 More details regarding why this is not the recommended approach are available throughout this Readme.
 
 ## NO NATIVE MODULES
