@@ -2,5 +2,8 @@ support
 test
 docs
 Gruntfile.js
-example/daemon
+example
+docs
+.*
+*.md
 *.sock
