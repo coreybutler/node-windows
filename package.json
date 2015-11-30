@@ -1,6 +1,6 @@
 {
   "name": "node-windows",
-  "version": "0.1.10",
+  "version": "0.1.11-PR107",
   "description": "Support for Windows services, event logging, UAC, and several helper methods for interacting with the OS.",
   "keywords": [
     "ngn",
