@@ -146,6 +146,22 @@ var svc = new Service({
 });
 ```
 
+### Setting the Service Account
+The user account under which the service executes can be specified in the config as shown below:
+
+```js
+// Create a new service object
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  serviceAccount:{
+    domain:'domain',
+    user:'username',
+    password:'password'
+  }
+});
+```
 
 ### User Account Attributes
 
