@@ -247,7 +247,7 @@ Both the initial wait time and the growth rate are configuration options that ca
 var svc = new Service({
   name:'Hello World',
   description: 'The nodejs.org example web server.',
-  script: 'C:\\path\\to\\helloworld.js'),
+  script: 'C:\\path\\to\\helloworld.js',
   wait: 2,
   grow: .5
 });
