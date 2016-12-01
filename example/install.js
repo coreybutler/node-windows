@@ -8,6 +8,11 @@ var svc = new Service({
   env:{
     name: "NODE_ENV",
     value: "production"
+  },
+  serviceAccount:{
+    domain:'domain',
+    user:'username',
+    password:'password'
   }
 });
 
