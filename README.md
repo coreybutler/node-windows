@@ -146,6 +146,20 @@ var svc = new Service({
 });
 ```
 
+### Command Line Parameters
+If your program or script takes arguments or parameters, you can define them by using the `parameters` option in in the config object.
+
+```js
+var projectPath = require('path').resolve(__dirname);
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  parameters: '--port 1234 --hot --files ./path/to/some/file.js
+  cwd: projectPath
+});
+```
+***Note*** In some cases it will be beneficial for you to include the `cwd` option pointing to your project directory. Remember to use an absolute path.
 
 ### User Account Attributes
 
