@@ -477,6 +477,12 @@ from removing it. In this scenario, simply run the uninstall again. In most case
 will fix the issue. If not, manually remove the `daemon` directory before running the
 installation again.
 
+# Thank You
+
+There have been many contributors who have done everything from committing features to helping pick up slack while I've been swamped. I'm incredibly appreciative for the help.
+
+Special thanks to @arthurblake whose modifications have FINALLY been added. Thanks to @hockeytim11, who helped compile and update a bunch of outstanding issues and started bringing support to the other node-* libraries.
+
 # Licenses
 
 winsw and sudowin are the copyrights of their respective owners. winsw
