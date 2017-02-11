@@ -1,6 +1,8 @@
-# Update (5/21/15)
+# Update (2/11/17)
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/coreybutler/node-windows?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+A number of issues that have been lingering since 2015 have finally been resolved, including .NET 4+ support.
 
 The number of issues between this project and it's sister projects ([node-mac](https://github.com/coreybutler/node-mac) & [node-linux](https://github.com/coreybutler/node-linux)) are accruing at a rate that deserves more attention than I can provide on my own. I'm actively looking for maintainers to help run this project. Please get in touch via gitter if you're interested.
 
