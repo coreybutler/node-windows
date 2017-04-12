@@ -1,6 +1,6 @@
-Please make sure you review the README, especially the updates, before submitting anything.
-
 **If you have a question, please use the node-windows tag on StackOverflow instead, available** [here](http://stackoverflow.com/questions/tagged/node-windows).
+
+Please make sure you review the README, especially the updates, before submitting anything.
 
 **Contributions must be cross-platform compatible...** node-windows/mac/linux share a common API.
 
