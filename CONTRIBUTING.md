@@ -8,7 +8,7 @@ Please make sure you review the README, especially the updates, before submittin
 
 ## NGN
 
-node-windows/mac/linux were built to support [NGN](http://github.com/nodengn). NGN is a Node.js-based microservice platform.
+node-windows/mac/linux were built to support [NGN](http://ngn.js.org). NGN is a Node.js-based microservice platform.
 In accordance to the Microservice/POA/SOA approach, it uses multiple independent but connected processes to support apps/systems.
 These processes are controlled with the node-* modules.
 
