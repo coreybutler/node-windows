@@ -1,6 +1,6 @@
 # Update (2/11/17)
 
-![Gitter(https://badges.gitter.im/Join Chat.svg)](https://gitter.im/coreybutler/node-windows?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+![Gitter](https://badges.gitter.im/Join Chat.svg)
 
 A number of issues that have been lingering since 2015 have finally been resolved, including .NET 4+ support.
 
