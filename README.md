@@ -1,6 +1,6 @@
 # Update (2/11/17)
 
-![Gitter](https://badges.gitter.im/Join Chat.svg)
+![Gitter](https://github.com/coreybutler/node-windows/wiki#can-a-exe-created-with-node-windows-run-on-a-computer-without-nodejs-installed)
 
 A number of issues that have been lingering since 2015 have finally been resolved, including .NET 4+ support.
 
