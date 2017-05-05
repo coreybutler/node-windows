@@ -17,9 +17,6 @@
   "author": "Corey Butler <corey@coreybutler.com>",
   "devDependencies": {},
   "main": "lib/node-windows.js",
-  "os": [
-    "win32"
-  ],
   "preferGlobal": true,
   "dependencies": {
     "optimist": "~0.6.0",
