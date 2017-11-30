@@ -119,6 +119,20 @@ They can be started/stopped from the windows service utility, via `NET START` or
 or even managed using the <a href="http://technet.microsoft.com/en-us/library/dd228922(v=ws.10).aspx">sc</a>
 utility.
 
+### Command-line Options
+
+It may be desired to specify command-line switches to your script. You can do this by setting the `scriptOptions` within the service config:
+
+```js
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  scriptOptions: '-c C:\\path\\to\\somewhere\\special -i'
+});
+```
+
+
 ### Environment Variables
 
 Sometimes you may want to provide a service with static data, passed in on creation of the service. You can do this by setting environment variables in the service config, as shown below:
