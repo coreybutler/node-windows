@@ -1,6 +1,10 @@
-# Update (2/11/17)
+# Update (2/20/18)
 
 [Gitter](https://gitter.im/coreybutler/node-windows)
+
+## NOTICE: Additional Maintainers Wanted
+
+I (Corey) am having a hard time keeping up with this project and am seeking additional maintainers. I've put alot of thought into a new version, but very little time to implement anything. In the meantime, the project continues to get a number of good PR's that need review, but I haven't had enough time to review them. The key to being a maintainer on this project is making sure fixes/features are supported across mac/linux as well... if you're interested in helping support one or more platforms, please ping me directly on gitter.
 
 A number of issues that have been lingering since 2015 have finally been resolved, including .NET 4+ support.
 
