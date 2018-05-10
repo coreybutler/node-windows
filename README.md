@@ -178,9 +178,9 @@ var svc = new Service({
   script: require('path').join(__dirname,'helloworld.js')
 });
 
-svc.user.domain = 'mydomain.local';
-svc.user.account = 'username';
-svc.user.password = 'password';
+svc.logOnAs.domain = 'mydomain.local';
+svc.logOnAs.account = 'username';
+svc.logOnAs.password = 'password';
 ...
 ```
 
