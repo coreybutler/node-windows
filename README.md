@@ -111,6 +111,7 @@ The `Service` object emits the following events:
 - _alreadyinstalled_ - Fired if the script is already known to be a service.
 - _invalidinstallation_ - Fired if an installation is detected but missing required files.
 - _uninstall_ - Fired when an uninstallation is complete.
+- _alreadyuninstalled_ - Fired when an uninstall is requested and no installation exists.
 - _start_ - Fired when the new service is started.
 - _stop_ - Fired when the service is stopped.
 - _error_ - Fired in some instances when an error occurs.
