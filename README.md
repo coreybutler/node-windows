@@ -1,14 +1,13 @@
-# Update (2/20/18)
+# node-windows
 
-[Gitter](https://gitter.im/coreybutler/node-windows)
+I no longer have enough time to properly maintain this project and am seeking a new primary maintainer.
 
-## NOTICE: Additional Maintainers Wanted
+This project has gained traction for two reasons:
 
-I (Corey) am having a hard time keeping up with this project and am seeking additional maintainers. I've put alot of thought into a new version, but very little time to implement anything. In the meantime, the project continues to get a number of good PR's that need review, but I haven't had enough time to review them. The key to being a maintainer on this project is making sure fixes/features are supported across mac/linux as well... if you're interested in helping support one or more platforms, please ping me directly on gitter.
+1. It works well on Windows.
+1. The same API can be used on macOS and Linux.
 
-A number of issues that have been lingering since 2015 have finally been resolved, including .NET 4+ support.
-
-The number of issues between this project and it's sister projects ([node-mac](https://github.com/coreybutler/node-mac) & [node-linux](https://github.com/coreybutler/node-linux)) are accruing at a rate that deserves more attention than I can provide on my own. I'm actively looking for maintainers to help run this project. Please get in touch via gitter if you're interested.
+The ideal maintainer would also support or at least closely work with the maintainer of ([node-mac](https://github.com/coreybutler/node-mac) & [node-linux](https://github.com/coreybutler/node-linux)). Please get in touch if you are interested in taking over.
 
 ![NPM version](https://badge.fury.io/js/node-windows.png)
 ![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.png)
