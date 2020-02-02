@@ -1,6 +1,18 @@
 # node-windows
 
-I no longer have enough time to properly maintain this project and am seeking a new primary maintainer.
+![NPM version](https://img.shields.io/npm/v/node-windows?label=node-windows&logo=npm&style=for-the-badge)
+![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.svg?style=for-the-badge)
+
+[Tweet me (@goldglovecb)](http://twitter.com/goldglovecb) if you need me.
+
+---
+
+**Update 2/1/2020**
+
+Several PR's that have been outstanding for months (or even years) have been merged (unless there were merge conflicts), which is why this version is tagged as "1.0.0-beta.1", despite the fact v0.1.11 has been used in production for years by over 500,000 processes. I would use the latest version in production apps.
+
+---
+I no longer have enough time to properly maintain this project and am seeking a new primary maintainer (or donations).
 
 This project has gained traction for two reasons:
 
@@ -9,24 +21,13 @@ This project has gained traction for two reasons:
 
 The ideal maintainer would also support or at least closely work with the maintainer of ([node-mac](https://github.com/coreybutler/node-mac) & [node-linux](https://github.com/coreybutler/node-linux)). Please get in touch if you are interested in taking over.
 
-![NPM version](https://badge.fury.io/js/node-windows.png)
-![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.png)
-![Build](https://api.travis-ci.org/coreybutler/node-windows.png)
-
-Follow the author on [G+](https://plus.google.com/u/1/111169756342687497578?rel=author)
-or [Twitter (@goldglovecb)](http://twitter.com/goldglovecb).
-
-This README provides a pretty good overview of what node-windows has to offer, but better
-documentation is now available at the [node-windows documentation portal](http://coreybutler.github.io/node-windows).
+---
 
 # node-windows
 
-  This is a standalone module, originally designed for internal use in [NGN](http://github.com/thinkfirst/NGN).
-  However; it is capable of providing the same features for Node.JS scripts
-  independently of NGN.
+  This is a standalone module, originally designed for internal use in [NGN](http://github.com/thinkfirst/NGN). However; it is capable of providing the same features for Node.JS scripts independently of NGN.
 
-  For alternative versions, see [node-mac](http://github.com/coreybutler/node-mac)
-  and [node-linux](http://github.com/coreybutler/node-linux)
+  For alternative versions, see [node-mac](http://github.com/coreybutler/node-mac) and [node-linux](http://github.com/coreybutler/node-linux).
 
 
 ## Overview
