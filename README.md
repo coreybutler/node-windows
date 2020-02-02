@@ -9,7 +9,7 @@
 
 **Update 2/1/2020**
 
-Several PR's that have been outstanding for months (or even years) have been merged (unless there were merge conflicts), which is why this version is tagged as "1.0.0-beta.1", despite the fact v0.1.11 has been used in production for years by over 500,000 processes. I would use the latest version in production apps.
+Several PR's that have been outstanding for months (or even years) have been merged (unless there were merge conflicts), which is why this version is tagged as "1.0.0-beta.1", despite the fact v0.1.14 has been used in production for years by over 500,000 processes. I would use the latest version in production apps.
 
 ---
 I no longer have enough time to properly maintain this project and am seeking a new primary maintainer (or donations).
