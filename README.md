@@ -157,6 +157,20 @@ var svc = new Service({
 ```
 
 
+### Node Executable Path
+
+There are times when you may want to specify a specific `node` executable to use to run your script. You can do this by setting the `execPath` in the service config, as shown below:
+
+```js
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  execPath: 'C:\\path\\to\\specific\\node.exe'
+});
+```
+
+
 ### User Account Attributes
 
 If you need to specify a specific user or particular credentials to manage a service, the following
