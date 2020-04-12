@@ -2,6 +2,7 @@
 
 ![NPM version](https://img.shields.io/npm/v/node-windows?label=node-windows&logo=npm&style=for-the-badge)
 ![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.svg?style=for-the-badge)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcoreybutler%2Fnode-windows.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcoreybutler%2Fnode-windows?ref=badge_shield)
 
 [Tweet me (@goldglovecb)](http://twitter.com/goldglovecb) if you need me.
 
@@ -553,3 +554,6 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcoreybutler%2Fnode-windows.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcoreybutler%2Fnode-windows?ref=badge_large)
