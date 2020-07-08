@@ -22,7 +22,7 @@
   ],
   "preferGlobal": true,
   "dependencies": {
-    "optimist": "~0.6.0",
+    "yargs": "^15.4.0",
     "xml": "0.0.12"
   },
   "readmeFilename": "README.md",
