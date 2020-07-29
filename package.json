@@ -19,7 +19,7 @@
   "main": "lib/node-windows.js",
   "preferGlobal": true,
   "dependencies": {
-    "optimist": "~0.6.0",
+    "@author.io/arg": "^1.3.11",
     "xml": "0.0.12"
   },
   "readmeFilename": "README.md",
