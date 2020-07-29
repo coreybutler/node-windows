@@ -90,6 +90,7 @@ var svc = new Service({
     '--max_old_space_size=4096'
   ]
   //, workingDirectory: '...'
+  //, allowServiceLogon: true
 });
 
 // Listen for the "install" event, which indicates the
@@ -205,7 +206,8 @@ var Service = require('node-windows').Service;
 // Create a new service object
 var svc = new Service({
   name:'Hello World',
-  script: require('path').join(__dirname,'helloworld.js')
+  script: require('path').join(__dirname,'helloworld.js'),
+  //, allowServiceLogon: true 
 });
 
 svc.logOnAs.domain = 'mydomain.local';
@@ -217,6 +219,8 @@ svc.logOnAs.password = 'password';
 Both the account and password must be explicitly defined if you want the service module to
 run commands as a specific user. By default, it will run using the user account that launched
 the process (i.e. who launched `node app.js`).
+
+If you want to instruct winsw to allow service account logins, specify `allowServiceLogon: true`. This is disabled by default since some users have experienced issues running this without service logons.
 
 The other attribute is `sudo`. This attribute has a single property called `password`. By supplying
 this, the service module will attempt to run commands using the user account that launched the
