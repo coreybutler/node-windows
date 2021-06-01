@@ -7,12 +7,6 @@
 
 ---
 
-**Update 2/1/2020**
-
-Several PR's that have been outstanding for months (or even years) have been merged (unless there were merge conflicts), which is why this version is tagged as "1.0.0-beta.1", despite the fact v0.1.14 has been used in production for years by over 600,000 processes. I would use the latest version in production apps.
-
----
-
 **Sponsors (as of 2020)**
 
 <table cellpadding="10" cellspacing="0" border="0">
@@ -26,9 +20,9 @@ Several PR's that have been outstanding for months (or even years) have been mer
 
 # node-windows
 
-  This is a standalone module, originally designed for internal use in [NGN](http://github.com/thinkfirst/NGN). However; it is capable of providing the same features for Node.JS scripts independently of NGN.
+  This library can be used to install/start/stop/uninstall Node scripts as Windows background services for **production** environments. This is not a tool for developing applications, it is a tool for releasing them. 
 
-  For alternative versions, see [node-mac](http://github.com/coreybutler/node-mac) and [node-linux](http://github.com/coreybutler/node-linux).
+  See [node-mac](http://github.com/coreybutler/node-mac) and [node-linux](http://github.com/coreybutler/node-linux) if you need to support those operating systems.
 
 
 ## Overview
