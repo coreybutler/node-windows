@@ -1,10 +1,11 @@
-var Service = require('../').Service;
+var Service = require('node-windows').Service;
+var dir = require('path').join(process.cwd(), 'helloworld.js')
 
 // Create a new service object
 var svc = new Service({
   name:'Hello World',
   description: 'The nodejs.org example web server.',
-  script: require('path').join('C:\path\to', 'helloworld.js'),
+  script: dir,
   env:{
     name: "NODE_ENV",
     value: "production"
@@ -29,4 +30,5 @@ svc.on('start',function(){
 });
 
 // Install the script as a service.
+console.log("Installing to", dir)
 svc.install();
