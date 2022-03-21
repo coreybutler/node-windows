@@ -1,7 +1,7 @@
 # node-windows
 
 ![NPM version](https://img.shields.io/npm/v/node-windows?label=node-windows&logo=npm&style=for-the-badge)
-![NGN Dependencies](https://david-dm.org/coreybutler/node-windows.svg?style=for-the-badge)
+![NGN Dependencies](https://img.shields.io/librariesio/release/npm/node-windows?style=for-the-badge)
 
 [Tweet me (@goldglovecb)](http://twitter.com/goldglovecb) if you need me.
 
