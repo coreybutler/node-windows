@@ -1,3 +1,4 @@
+// var Service = require('../lib/node-windows.js').Service;
 var Service = require('node-windows').Service;
 var dir = require('path').join(process.cwd(), 'helloworld.js')
 
