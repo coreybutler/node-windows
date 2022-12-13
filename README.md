@@ -489,7 +489,7 @@ output on a Windows 8 computer.
 }]
 ```
 
-The regualar (non-verbose) output typically provides the `ImageName`,`PID`,`SessionName`,
+The regular (non-verbose) output typically provides the `ImageName`,`PID`,`SessionName`,
 `Session#`, `MemUsage`, and `CPUTime`.
 
 ## kill
