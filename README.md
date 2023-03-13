@@ -239,6 +239,19 @@ svc.sudo.password = 'password';
 ...
 ```
 
+### Depending on other services
+
+The service can also be made dependant on other Windows services.
+
+```js
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  dependsOn: ["serviceA"]
+});
+```
+
 ### Cleaning Up: Uninstall a Service
 
 Uninstalling a previously created service is syntactically similar to installation.
