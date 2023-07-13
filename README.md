@@ -353,7 +353,7 @@ the node-windows Event Logging.
 # Event Logging
 
 New as of `v0.1.0` is a _non-C++_ based event logging utility. This utility can write to the event log,
-making your logs visible from the Event Viewer.
+making your logs visible from the Event Viewer. It uses [eventcreate](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/eventcreate) under the hood.
 
 To create a logger:
 
@@ -383,8 +383,10 @@ arguments, including a _code_ and _callback_. By default, the event code is `100
 To provide a custom event code with a log message and write that message to the console, the following code could
 be used:
 
+> **Notice:** It appears [eventcreate](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/eventcreate) only supports custom ID's <1000.
+
 ```js
-log.info('Something different happened!', 1002, function(){
+log.info('Something different happened!', 700, function(){
   console.log('Something different happened!');
 });
 ```
