@@ -383,7 +383,7 @@ arguments, including a _code_ and _callback_. By default, the event code is `100
 To provide a custom event code with a log message and write that message to the console, the following code could
 be used:
 
-> **Notice:** It appears [eventcreate](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/eventcreate) only supports custom ID's <1000.
+> **Notice:** It appears [eventcreate](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/eventcreate) only supports custom ID's <=1000.
 
 ```js
 log.info('Something different happened!', 700, function(){
