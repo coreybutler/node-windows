@@ -245,8 +245,6 @@ svc.sudo.password = 'password';
 ...
 ```
 
-
-
 **app.js**
 
 To use Group Managed Service Accounts, append `$` to the end of account name and specify `svc.logOnAs.gmsa = true`
