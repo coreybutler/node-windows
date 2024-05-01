@@ -408,6 +408,17 @@ var log = new EventLogger({
 });
 ```
 
+Warning event logs that are produced by the wrapper can be suppressed by disabling it when creating the service.
+Warning logs are enabled by default.
+
+```js
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  disableWarningLogs: true,
+});
+```
+
 ---
 
 # Commands
