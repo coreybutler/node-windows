@@ -245,6 +245,28 @@ svc.sudo.password = 'password';
 ...
 ```
 
+**app.js**
+
+To use Group Managed Service Accounts, append `$` to the end of account name and specify `svc.logOnAs.gmsa = true`
+
+
+```js
+var Service = require('node-windows').Service;
+
+// Create a new service object
+var svc = new Service({
+  name:'Hello World',
+  script: require('path').join(__dirname,'helloworld.js'),
+  allowServiceLogon: true 
+});
+
+svc.logOnAs.domain = 'mydomain.local';
+svc.logOnAs.account = 'username_$';
+svc.logOnAs.gmsa = true;
+...
+```
+
+
 ### Depending on other services
 
 The service can also be made dependant on other Windows services.
