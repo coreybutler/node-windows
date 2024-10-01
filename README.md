@@ -3,7 +3,7 @@
 ![NPM version](https://img.shields.io/npm/v/node-windows?label=node-windows&logo=npm&style=for-the-badge)
 ![NGN Dependencies](https://img.shields.io/librariesio/release/npm/node-windows?style=for-the-badge)
 
- This library can be used to install/start/stop/uninstall Node scripts as Windows background services for **production** environments. This is not a tool for developing applications, it is a tool for releasing them. 
+ This library can be used to install/start/stop/uninstall Node scripts as Windows background services for **production** environments. This is not a tool for developing applications, it is a tool for releasing them. This tool generates an executable that will run your app with whichever version of Node.js is installed on the computer.
 
   See [node-mac](http://github.com/coreybutler/node-mac) and [node-linux](http://github.com/coreybutler/node-linux) if you need to support those operating systems.
     
