@@ -434,7 +434,7 @@ privileges, the command will fail with a `access denied` error.
 
 On systems with UAC enabled, this may prompt the user for permission to proceed:
 
-![UAC Prompt](http://upload.wikimedia.org/wikipedia/en/5/51/Windows_7_UAC.png)
+![UAC Prompt](https://en.wikipedia.org/wiki/File:User_Account_Control.png#/media/File:User_Account_Control.png)
 
 **Syntax**:
 
@@ -567,7 +567,7 @@ All other scripts are Copyright (c) Corey Butler under an MIT license.
 
 (The MIT License)
 
-Copyright (c) 2013 Corey Butler
+Copyright (c) 2013-2022 Corey Butler
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
