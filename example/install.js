@@ -10,7 +10,8 @@ var svc = new Service({
   env:{
     name: "NODE_ENV",
     value: "production"
-  }
+  },
+  autoServiceRestart: false
 });
 
 // Listen for the "install" event, which indicates the

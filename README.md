@@ -95,6 +95,7 @@ var svc = new Service({
   ]
   //, workingDirectory: '...'
   //, allowServiceLogon: true
+  //, autoServiceRestart: true
 });
 
 // Listen for the "install" event, which indicates the
@@ -255,6 +256,18 @@ var svc = new Service({
   description: 'The nodejs.org example web server.',
   script: 'C:\\path\\to\\helloworld.js',
   dependsOn: ["serviceA"]
+});
+```
+### Handle service level process death
+
+The service can also be restarted by windows in the event that the underlying wrapper process dies.
+
+```js
+var svc = new Service({
+  name:'Hello World',
+  description: 'The nodejs.org example web server.',
+  script: 'C:\\path\\to\\helloworld.js',
+  autoServiceRestart: true
 });
 ```
 
